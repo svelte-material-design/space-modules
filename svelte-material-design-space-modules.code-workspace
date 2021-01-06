@@ -7,12 +7,12 @@
 	"settings": {
 		"typescript.tsdk": "node_modules\\typescript\\lib",
 		"workbench.colorCustomizations": {
-			"activityBar.activeBackground": "#e4712f",
-			"activityBar.activeBorder": "#849e8e",
-			"activityBar.background": "#e2a785",
+			"activityBar.activeBackground": "#34dab0",
+			"activityBar.activeBorder": "#08a77f",
+			"activityBar.background": "#068651",
 			"activityBar.foreground": "#303030",
-			"activityBar.inactiveForeground": "#797979",
-			"activityBarBadge.background": "#555563",
+			"activityBar.inactiveForeground": "#dbdbdb",
+			"activityBarBadge.background": "#770736",
 			"activityBarBadge.foreground": "#e7e7e7",
 			"statusBar.background": "#555563",
 			"statusBar.foreground": "#e7e7e7",

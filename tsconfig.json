@@ -1,0 +1,25 @@
+{
+	"extends": "@tsconfig/svelte/tsconfig.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"target": "ES2019",
+		"lib": [
+			"DOM",
+			"ES2020",
+		],
+		"allowSyntheticDefaultImports": true,
+		"keyofStringsOnly": true,
+		"paths": {
+			"@svelte-material-design/core/*": [
+				"./node_modules/@svelte-material-design/core/packages/*"
+			]
+		}
+	},
+	"include": [
+		"index.ts",
+		"packages/**/*"
+	],
+	"exclude": [
+		"node_modules/**/*",
+	]
+}

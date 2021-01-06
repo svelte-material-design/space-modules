@@ -1,0 +1,89 @@
+{
+	"name": "@svelte-material-design/space-modules",
+	"version": "0.0.1",
+	"description": "",
+	"main": "cjs/index.js",
+	"module": "esm/index.ts",
+	"exports": {
+		".": "./"
+	},
+	"scripts": {
+		"clean-lib": "del-cli lib",
+		"copy:package": "copyfiles package.json lib",
+		"copy:cjs": "copyfiles --up 1 packages/**/*.* lib/cjs",
+		"copy:esm": "copyfiles --up 1 packages/**/*.* lib/esm",
+		"tsc:cjs": "tsc -p tsconfig.lib.cjs.json",
+		"tsc:esm": "tsc -p tsconfig.lib.esm.json",
+		"lib": "npm-run-all clean-lib copy:package copy:cjs copy:esm tsc:cjs",
+		"prepackage": "npm run lib",
+		"package": "npm publish ./lib --access public",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/svelte-material-design/space-modules.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": "Hunter Perrin <hperrin@gmail.com>",
+	"contributors": [
+		"Ray Thurne <monkeythedev@gmail.com>"
+	],
+	"license": "ISC",
+	"type": "module",
+	"dependencies": {
+		"@material/banner": "^9.0.0",
+		"@material/base": "^9.0.0",
+		"@material/button": "^9.0.0",
+		"@material/card": "^9.0.0",
+		"@material/checkbox": "^9.0.0",
+		"@material/chips": "^9.0.0",
+		"@material/data-table": "^9.0.0",
+		"@material/dialog": "^9.0.0",
+		"@material/drawer": "^9.0.0",
+		"@material/elevation": "^9.0.0",
+		"@material/fab": "^9.0.0",
+		"@material/feature-targeting": "^9.0.0",
+		"@material/floating-label": "^9.0.0",
+		"@material/form-field": "^9.0.0",
+		"@material/icon-button": "^9.0.0",
+		"@material/image-list": "^9.0.0",
+		"@material/line-ripple": "^9.0.0",
+		"@material/linear-progress": "^9.0.0",
+		"@material/list": "^9.0.0",
+		"@material/menu": "^9.0.0",
+		"@material/menu-surface": "^9.0.0",
+		"@material/notched-outline": "^9.0.0",
+		"@material/radio": "^9.0.0",
+		"@material/ripple": "^9.0.0",
+		"@material/rtl": "^9.0.0",
+		"@material/select": "^9.0.0",
+		"@material/shape": "^9.0.0",
+		"@material/slider": "^9.0.0",
+		"@material/snackbar": "^9.0.0",
+		"@material/switch": "^9.0.0",
+		"@material/tab": "^9.0.0",
+		"@material/tab-bar": "^9.0.0",
+		"@material/tab-indicator": "^9.0.0",
+		"@material/tab-scroller": "^9.0.0",
+		"@material/textfield": "^9.0.0",
+		"@material/theme": "^9.0.0",
+		"@material/top-app-bar": "^9.0.0",
+		"@material/typography": "^9.0.0",
+		"@svelte-material-design/core": "file:../svelte-material-ui-core",
+		"@raythurnevoid/svelte-hooks": "^0.0.2",
+		"@raythurnevoid/svelte-group-components": "^0.0.5",
+		"@raythurnevoid/svelte-context-enhanced": "^0.0.1"
+	},
+	"devDependencies": {
+		"@tsconfig/svelte": "^1.0.10",
+		"copyfiles": "^2.4.1",
+		"del-cli": "^3.0.1",
+		"lerna": "^3.22.1",
+		"npm-run-all": "^4.1.5",
+		"svelte": "^3.29.4",
+		"svelte-preprocess": "^4.5.2",
+		"typescript": "^4.1.3"
+	}
+}
